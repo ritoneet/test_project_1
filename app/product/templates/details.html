@@ -1,0 +1,29 @@
+{% extends 'basefile.html' %}
+
+
+{% block main_stylesheet %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles_NEW.css' %}">
+{% endblock %}
+
+{% block main_content %}
+<div style="display: flex; justify-content: left; font-size: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif">
+    <img src="{{ object.image.url }}" class="card-img-top image-size" style="width: 500px; height: auto; margin: 0 10px" alt="...">
+    {{ object.name_product }}
+    <br/>
+    {{ object.price }}
+    <br/>
+    {{ object.description }}
+    <br/>
+    {{ object.created }}
+
+</div>
+<br>
+{% if not request.user.is_authenticated %}
+<a href="{% url 'reg-link' %}" class="btn btn-primary mr-2">Sign up</a>
+{% else %}
+<a href="#" class="btn btn-primary mr-2">Buy</a>
+{% endif %}
+{% endblock %}
+

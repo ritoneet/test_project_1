@@ -1,0 +1,14 @@
+{% extends 'basefile.html' %}
+
+{% block main_content %}
+{%for i in result%}
+
+{{i.type}}
+{{i.buy}}
+{{i.sale}}
+{{i.create}}
+{{i.source}}
+<br>
+
+{%endfor %}
+{% endblock %}

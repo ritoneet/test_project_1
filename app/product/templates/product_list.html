@@ -1,0 +1,19 @@
+{% extends 'basefile.html' %}
+{% block main_content %}
+<div class="container">
+  <div class="row">
+    {% for i in product_list %}
+    <div class="card" style="width: 18rem; margin-right: 15px; margin-bottom: 15px;"> <!-- добавлены отступы для карточек -->
+      <div class="card-body">
+        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+        <h5 class="card-title">{{i.name_product}}</h5>
+        <p>{{i.price}}</p>
+        <a href="{% url 'details-link' pk=i.pk %}" class="btn btn-primary mr-2">Details</a> <!-- добавлен класс mr-2 для правильного выравнивания кнопок -->
+        <a href="{% url 'update-link' pk=i.pk %}" class="btn btn-primary mr-2">Update</a> <!-- добавлен класс mr-2 для правильного выравнивания кнопок -->
+        <a href="{% url 'delete-link' pk=i.pk %}" class="btn btn-danger">Delete</a> <!-- использован класс btn-danger для кнопки удаления -->
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

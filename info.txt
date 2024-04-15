@@ -1,0 +1,10 @@
+python -m venv myvenv
+myvenv\Scripts\activate
+python -m pip install --upgrade pip
+pip install django==3.2.8
+mkdir app
+cd app
+django-admin.exe startproject settings .
+python manage.py runserver
+python manage.py startapp product
+

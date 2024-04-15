@@ -1,0 +1,22 @@
+
+h2 {
+    font-size: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FF1493
+    }
+
+h3 {
+    font-size: 100%
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+.image-container {
+    display: flex; /* Устанавливаем родительский контейнер flexbox */
+    justify-content: center; /* Выравниваем изображения по центру */
+}
+
+.image-size {
+    max-width: 100px; /* Устанавливаем максимальную ширину для изображений */
+    height: auto; /* Оставляем 'auto', чтобы сохранить пропорции изображения */
+    margin: 0 10px; /* Добавляем небольшие отступы между изображениями */
+}
